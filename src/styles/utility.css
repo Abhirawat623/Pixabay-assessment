@@ -96,6 +96,10 @@
     border:none;
     
   }
+  .text-xl{
+    font-size:4.2rem ;
+    line-height: 5.2rem;
+  }
 .text-l {
     font-size: 3.2rem;
     line-height: 4rem;

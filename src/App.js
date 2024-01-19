@@ -1,12 +1,13 @@
-import {Homepage} from './Pages/index';
+import {Homepage,Searchpage} from './Pages/index';
 import './App.css';
-import { Fragment } from 'react';
+import {Routes,Route} from 'react-router-dom';
 
 function App() {
   return (
-  <Fragment>
-    <Homepage/>
-  </Fragment>
+  <Routes>
+    <Route exact path='/' element={<Homepage/>}/>
+    <Route exact path='/Search' element={<Searchpage/>}/>
+  </Routes>
   );
 }
 
