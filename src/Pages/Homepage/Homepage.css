@@ -4,14 +4,6 @@
     background-position: center center;
     height: 100vh;
     z-index: -1;
-   object-fit: cover;
-   
-}
-.display-text-top{
-    top: 5rem;
-    left:32rem;
-}
-.display-text-bottom{
-    top:5.5rem;
-    left:38rem;
+    object-fit: cover;
+    padding-top: 5rem;
 }

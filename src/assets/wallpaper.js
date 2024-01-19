@@ -1,4 +1,4 @@
-export const images =[
+export const wallpaper =[
 
     {
       thumbnail:"../wallpapers/wallpaper1.jpg"

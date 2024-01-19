@@ -5,8 +5,7 @@
     border: 4px solid var(--border-color);
     width: 40%;
     z-index: 0; 
-    bottom:22rem;
-    left:36rem;
+   
 }
 .searchbar-input{
        border: none;
