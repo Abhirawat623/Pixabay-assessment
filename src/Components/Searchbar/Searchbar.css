@@ -11,7 +11,8 @@
        border: none;
         background-color: transparent;
         border-left: 3px solid var(--primary-color);
-        font-size: 3.5rem;
+        font-size: 2.8rem;
+        
 }
 .searchbar-input:focus{
     outline: none;

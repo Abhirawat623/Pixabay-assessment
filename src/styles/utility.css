@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined");
 
 :root {
-    --primary-color: #f3f3f3;
+    --primary-color: #f5e8e8;
     --primary-color-hover: #c7c7c7;
     --secondary-color: #101111;
     --accent-color: #059669;
@@ -51,6 +51,9 @@
   
   .gap-l{
     gap:1.4rem
+  }
+  .gap-xl{
+    gap:2.5rem;
   }
   .relative{
     position: relative;

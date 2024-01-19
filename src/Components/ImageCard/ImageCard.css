@@ -16,7 +16,8 @@
   scale: 1.003;
   transition: ease-out;
 }
-.card-image-tag {
-    background-color: var(--text-color-secondary);
+/* .card-image-tag {
+    background-color: var(--primary-color-hover);
     color:var(--text-color-primary);
-}
+    padding:6px;
+} */

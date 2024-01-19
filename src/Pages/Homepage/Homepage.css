@@ -6,4 +6,7 @@
     z-index: -1;
     object-fit: cover;
     padding-top: 5rem;
+    position: fixed;
+    overflow-y: scroll;
+    width: 100%;
 }
