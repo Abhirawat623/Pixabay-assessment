@@ -1,6 +1,6 @@
 import './Searchpage.css';
 import {wallpaper} from '../../assets/wallpaper';
-import {Navbar,Searchbar} from '../../Components/index';
+import {Navbar,Searchbar,ResultContainer} from '../../Components/index';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 export const Searchpage=()=>{
@@ -29,6 +29,7 @@ export const Searchpage=()=>{
  style={{backgroundImage:`url("${randomWallpaper}")`}}>
   <Navbar/>
   <Searchbar/>
+  <ResultContainer/>
   </main>
     )
 }
