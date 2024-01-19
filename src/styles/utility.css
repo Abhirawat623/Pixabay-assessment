@@ -1,0 +1,113 @@
+
+:root {
+    --primary-color: #f3f3f3;
+    --primary-color-hover: #c7c7c7;
+    --secondary-color: #101111;
+    --accent-color: #059669;
+    --background-color: #efefef;
+    --text-color-primary: #000000;
+    --text-color-secondary: #ffffff;
+    --border-color: #727272;
+    --success: #4ade80;
+    --error: #f87171;
+    --warning: #fde047;
+    --info: #bfdbfe;
+}
+.d-flex{
+    display: flex;
+  }
+  .direction-column{
+    flex-direction: column;
+  }
+  .direction-row{
+    flex-direction: row;
+  }
+  .align-center{
+    align-items: center;
+  }
+  
+  .justify-center{
+    justify-content: center;
+  }
+  .space-between{
+    justify-content: space-between;
+  }
+  
+  .wrap{
+    flex-wrap: wrap;
+  }
+  
+  .gap-s{
+    gap:0.6rem
+  }
+  .gap-m{
+    gap:1rem
+  }
+  
+  .gap-l{
+    gap:1.4rem
+  }
+  .relative{
+    position: relative;
+  }
+  .absolute{
+    position:absolute;
+  }
+  .fixed{
+    position:fixed;
+  }
+  .top-0{
+  top:0
+  }
+  .left-0{
+    left:0
+  }
+  .right-0{
+  right:0
+  }
+  .bottom-0{
+    bottom: 0;
+  }
+  .border-radius-s{
+    border-radius: 5px;
+  }
+  .border-radius-m{
+    border-radius: 10px;
+  }
+  .border-radius-l{
+    border-radius: 15px;
+  }
+  .padding-s{
+    padding: 10px;
+  }
+  .padding-m{
+    padding:1rem;
+  }
+  .padding-l{
+    padding: 1.5rem;
+  }
+  
+h1 {
+    font-size: 3.2rem;
+    line-height: 4rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+}
+
+h4 {
+    font-size: 1rem;
+    line-height: 1.6rem;
+}
+
+h5 {
+    font-size: 10px;
+    line-height: 1.2rem;
+}
