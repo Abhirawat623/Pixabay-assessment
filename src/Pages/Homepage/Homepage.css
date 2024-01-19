@@ -1,0 +1,9 @@
+.wallpaper{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    z-index: -1;
+   object-fit: cover;
+   
+}
