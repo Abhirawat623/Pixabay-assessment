@@ -1,6 +1,6 @@
 import './Homepage.css'
 import {images} from '../../assets/images';
-import {Navbar} from '../../Components/index';
+import {Navbar,Searchbar} from '../../Components/index';
 export const Homepage =()=>{
     //for random wallpaper
     const index= Math.floor(Math.random()*(images.length-1));
@@ -10,6 +10,7 @@ export const Homepage =()=>{
     <>
     <main className="wallpaper" style={{backgroundImage:`url("${randomWallpaper}")`}}>
   <Navbar/>
+  <Searchbar/>
   </main></>
     )
 
