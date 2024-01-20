@@ -1,4 +1,8 @@
 .horizontal-image-card-container{
     display: grid;
     grid-template-columns: 1fr 10fr 1fr;
+    z-index:1000;
+   
+    border :5px solid black;
+    background-color: red;
 }
