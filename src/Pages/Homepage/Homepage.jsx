@@ -1,6 +1,6 @@
 import './Homepage.css'
 import {wallpaper} from '../../assets/wallpaper';
-import {Navbar,Searchbar} from '../../Components/index';
+import {Navbar,Searchbar,Login} from '../../Components/index';
 export const Homepage =()=>{
     //for random wallpaper
     const index= Math.floor(Math.random()*(wallpaper.length-1));
@@ -14,6 +14,7 @@ export const Homepage =()=>{
   <h1 className='display-text-top primary-text relative text-xl'>Discover over 2,000,000</h1> 
     <h1 className='display-text-bottom primary-text text-xl relative'>free Stock Images</h1>
   <Searchbar/>
+  <Login/>
   </main>
     )
 
