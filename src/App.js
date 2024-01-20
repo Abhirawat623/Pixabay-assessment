@@ -6,7 +6,8 @@ function App() {
   return (
   <Routes>
     <Route exact path='/' element={<Homepage/>}/>
-    <Route exact path='/Search' element={<Searchpage/>}/>
+    <Route path='/Search' element={<Searchpage/>}/>
+    <Route path='/Search/:_id' element={<Searchpage/>}/>
   </Routes>
   );
 }

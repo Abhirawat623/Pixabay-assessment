@@ -1,6 +1,6 @@
 import './Searchpage.css';
 import {wallpaper} from '../../assets/wallpaper';
-import {Navbar,Searchbar,ResultContainer} from '../../Components/index';
+import {Navbar,Searchbar,ResultContainer,HorizontalImageCard} from '../../Components/index';
 
 export const Searchpage=()=>{
         
@@ -13,6 +13,7 @@ export const Searchpage=()=>{
   <Navbar/>
   <Searchbar/>
   <ResultContainer/>
+  <HorizontalImageCard/>
 
   </main>
     )

@@ -8,6 +8,7 @@
     --accent-color: #059669;
     --border-color: rgba(255, 252, 252, 0.12);
     --background-color: rgba(255,255,255,0.1);
+    --text-background-color: rgb(143, 140, 140);
     --text-color-primary: #000000;
     --text-color-secondary: #ffffff;
     --success: #4ade80;
@@ -37,7 +38,7 @@
   .space-between{
     justify-content: space-between;
   }
-  
+
   .wrap{
     flex-wrap: wrap;
   }
@@ -121,4 +122,14 @@
 
 .primary-text{
  color:var(--primary-color);
+}
+.secondary-text{
+  color:var(--text-color-primary);
+}
+.accent-text{
+  color: gray;
+}
+.bold-text{
+  font-weight: 600;
+  font-size: 1.32rem;
 }

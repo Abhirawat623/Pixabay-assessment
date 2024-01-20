@@ -1,8 +1,46 @@
-.horizontal-image-card-container{
-    display: grid;
-    grid-template-columns: 1fr 10fr 1fr;
-    z-index:1000;
-   
-    border :5px solid black;
-    background-color: red;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+.horizontal-image-card-container {
+  
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
+  z-index: 1000;
+  border: 5px solid black;
+  background-color: var(--primary-color);
+  position: absolute;
+  height: 85vh;
+  top: 5rem;
+  margin: auto;
+  width: 95%;
+  z-index: 1;
+}
+.horizontal-image-card-header {
+  height: 3rem;
+  width: 100%;
+  color: white;
+  text-align: start;
+  background-color: var(--text-background-color);
+}
+.horizontal-image-card-main {
+  height: 35rem;
+  width: 95rem;
+}
+.horizontal-image-card-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.horizontal-image-card-aside-container {
+  display: grid;
+}
+.horizontal-image-card-download {
+}
+.horizontal-image-card-information {
+  z-index: 2;
+}
+.horizontal-image-info {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  object-fit: cover;
+}
+.horizontal-image-info {
 }
