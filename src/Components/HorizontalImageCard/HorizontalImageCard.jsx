@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import "./HorizontalImageCard.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
-
 export const HorizontalImageCard = () => {
   const { _id } = useParams();
   //for single image card
@@ -27,9 +26,10 @@ export const HorizontalImageCard = () => {
   console.log(largeImageURL);
 
   return (
-    <div className="horizontal-image-card-container d-flex direction-column align-center ">
-      <header className="horizontal-image-card-header">
+    <div className="horizontal-image-card-container d-flex direction-column align-center">
+      <header className="horizontal-image-card-header d-flex direction-row">
         <h2 className="primary-text text-m ">Preview ID:{_id}</h2>
+        <span id='close-icon'><span class="material-symbols-outlined ">close</span></span>
       </header>
       <main
         className="horizontal-image-card-main d-flex direction-row align-center 

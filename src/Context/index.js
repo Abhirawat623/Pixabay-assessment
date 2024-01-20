@@ -1,0 +1,1 @@
+export {useSearchedImage,SearchedImageProvider} from '../Context/searchedImage-context';

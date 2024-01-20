@@ -1,0 +1,1 @@
+export {searchedImageReducer} from './searchedImage-reducer';
