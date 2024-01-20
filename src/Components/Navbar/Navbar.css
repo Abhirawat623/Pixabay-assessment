@@ -12,3 +12,13 @@
     padding: 5px;
 
 }
+
+.homepage-text{
+    text-decoration: none;
+    list-style: none;
+}
+.homepage-text:visited{
+    color: #fff;
+
+    
+}

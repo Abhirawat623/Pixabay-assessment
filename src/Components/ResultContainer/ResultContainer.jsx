@@ -17,7 +17,7 @@ export const ResultContainer = () => {
         console.log(error);
       }
     })();
-  }, [searchedImages]);
+  }, []);
   return (
     <main className="searched-images-container">
       {searchedImages.map((searchedImage) => (

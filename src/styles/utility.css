@@ -11,7 +11,7 @@
     --text-background-color: rgb(143, 140, 140);
     --text-color-primary: #000000;
     --text-color-secondary: #ffffff;
-    --success: #4ade80;
+    --success: #17e964;
     --error: #f87171;
     --warning: #fde047;
     --info: #bfdbfe;
@@ -132,4 +132,7 @@
 .bold-text{
   font-weight: 600;
   font-size: 1.32rem;
+}
+.cursor{
+cursor:pointer;
 }
