@@ -71,7 +71,7 @@ Install dependencies
 Start the server
 
 ```bash
-  npm start ko
+  npm start 
 ```
 
 
