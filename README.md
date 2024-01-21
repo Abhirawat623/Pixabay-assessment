@@ -53,7 +53,7 @@ Clone the project by adding the following command in the terminal.
 Make sure your have git installed and added to path.
 
 ```bash
-   [https://github.com/Abhirawat623/VTravel.git](https://github.com/Abhirawat623/Pixabay-assessment.git)
+   git colne https://github.com/Abhirawat623/Pixabay-assessment.git
 ```
 
 Go to the project directory
