@@ -77,5 +77,19 @@ Start the server
 ```bash
   npm start
 ```
+## Screen Video
 
+
+https://github.com/Abhirawat623/Pixabay-assessment/assets/131130116/78751ee2-3506-410d-85bb-68162426c1f6
+
+
+
+##Screenshots
+![photo_2024-01-21_17-02-55](https://github.com/Abhirawat623/Pixabay-assessment/assets/131130116/9a221f0b-55df-43a0-87c7-52a514e2fc45)
+
+![photo_2024-01-21_17-02-54](https://github.com/Abhirawat623/Pixabay-assessment/assets/131130116/a9fd529e-2c66-4081-9b8e-ac3aa184e6b7)
+
+![photo_2024-01-21_17-02-54 (2)](https://github.com/Abhirawat623/Pixabay-assessment/assets/131130116/738b8a53-0c27-4fdd-8351-8b52e99e3582)
+
+![photo_2024-01-21_17-02-52](https://github.com/Abhirawat623/Pixabay-assessment/assets/131130116/d422d3fd-5e5f-44f5-bdd5-c1c94844dd20)
 
