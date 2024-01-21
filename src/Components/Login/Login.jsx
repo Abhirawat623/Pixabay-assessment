@@ -62,6 +62,9 @@ export const Login = () => {
         });
       }
     }
+    else{
+      alert("Please Submit Correct Details")
+    }
   };
 
   const handlleTestLoginButton = async (event) => {
@@ -103,7 +106,7 @@ export const Login = () => {
         <form className="d-flex direction-column gap-s align-center">
           <span className="auth-background">
             <div className="auth-form">
-              <label className="form-label secondary-text text-m">Mobile Number</label>
+              <label className="form-label secondary-text text-m cursor">Mobile Number</label>
               <input
                 className="input-form"
                 placeholder="Enter Registered Mobile Number"
@@ -113,7 +116,7 @@ export const Login = () => {
               />
             </div>
             <div className="auth-form">
-              <label className="form-label secondary-text text-m ">Password</label>
+              <label className="form-label secondary-text cursor text-m ">Password</label>
               <input
                 className="input-form"
                 placeholder="*********"
@@ -124,12 +127,12 @@ export const Login = () => {
             </div>
           </span>
           <div className="cta">
-            <button className="test-btn log-btn secondary-text text-s pointer" onClick={handleLogin}>
+            <button className="test-btn log-btn secondary-text text-s cursor" onClick={handleLogin}>
               Login
             </button>
           </div>
         </form>
-        <button className="test-btn crd-btn secondary-text text-s pointer" onClick={handlleTestLoginButton}>
+        <button className="test-btn crd-btn secondary-text text-s cursor" onClick={handlleTestLoginButton}>
           Login with Test Credentials
         </button>
       </div>

@@ -9,7 +9,7 @@ import {
 import { useSearchedImage } from "../../Context/index";
 export const Searchpage = () => {
   //for random wallpaper for searchpage
-  const index = Math.floor(Math.random() * (wallpaper.length - 1));
+  const index = Math.floor(Math.random());
   const randomWallpaper = wallpaper[index].thumbnail;
   //single image modal
   const { isSingleImageModalOpen } = useSearchedImage();

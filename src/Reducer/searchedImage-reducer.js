@@ -5,7 +5,11 @@ export const searchedImageReducer= (state, { type, payload }) => {
         ...state,
         isSingleImageModalOpen: !state.isSingleImageModalOpen,
       };
-
+    case "SEARCHED_VALUE":
+      return{
+        ...state,
+        searchedValue:payload
+      }
     default:
       return state;
   }

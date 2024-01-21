@@ -127,7 +127,7 @@ const {setAlert} = useAlert()
             <span className="auth-signup-background">
               <div className="auth-form">
                 <div className="auth-form">
-                  <label className="form-label text-s ml-l">Name*</label>
+                  <label className="form-label text-s ml-l cursor">Name*</label>
                   <input
                     className="input-form"
                     placeholder="Enter Full Name"
@@ -137,7 +137,7 @@ const {setAlert} = useAlert()
                   />
                 </div>
                 <div className="auth-form">
-                  <label className="form-label text-s ml-l">E-mail*</label>
+                  <label className="form-label text-s ml-l" cursor>E-mail*</label>
                   <input
                     className="input-form"
                     placeholder="Enter a valid E-mail"
@@ -160,7 +160,7 @@ const {setAlert} = useAlert()
                   />
                 </div>
                 <div className="auth-form">
-                  <label className="form-label text-s ml-l">
+                  <label className="form-label text-s ml-l cursor">
                     Confirm Password*
                   </label>
                   <input
@@ -172,7 +172,7 @@ const {setAlert} = useAlert()
                     defaultValue={confirmPassword}
                   />
                 </div>
-                <label className="form-label text-s  ">
+                <label className="form-label text-s cursor ">
                   Mobile Number*
                 </label>
                 <input
@@ -185,7 +185,7 @@ const {setAlert} = useAlert()
                 />
               </div>
             </span>
-            <button className="auth-login-btn test-btn log-btn text-s">Create Account</button>
+            <button className="auth-login-btn test-btn log-btn text-s cursor">Create Account</button>
           </form>
         </div>
       </div>
