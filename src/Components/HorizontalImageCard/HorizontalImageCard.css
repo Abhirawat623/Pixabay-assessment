@@ -11,12 +11,12 @@
   position: fixed;
   border-radius: 8px;
 }
-#close-icon{
-    scale: 1.8;
-    color: black;
-    position: absolute;
-    top:10px;
-    right: 18px;
+#close-icon {
+  scale: 1.8;
+  color: black;
+  position: absolute;
+  top: 10px;
+  right: 18px;
 }
 .horizontal-image-card-header {
   height: 3rem;
@@ -24,7 +24,7 @@
   color: white;
   padding: 4px;
   background-color: var(--text-background-color);
-  border-top-left-radius: 8px ;
+  border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
 .horizontal-image-card-main {
@@ -34,7 +34,7 @@
 .horizontal-image-card-image {
   height: 100%;
   width: 100%;
-  object-fit:fill;
+  object-fit: fill;
 }
 .horizontal-image-card-aside-container {
   display: grid;
@@ -49,9 +49,8 @@
   grid-template-columns: repeat(3, auto);
   object-fit: cover;
 }
-.download-btn{
-    background-color: var(--success);
-    height: 2.5rem;
-    width: 100%;
-
+.download-btn {
+  background-color: var(--success);
+  height: 2.5rem;
+  width: 100%;
 }

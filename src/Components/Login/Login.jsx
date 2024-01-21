@@ -1,6 +1,6 @@
 import "./Login.css";
 import { Link } from "react-router-dom";
-import{ Alert} from '../Alert/Alert';
+import { Alert } from "../Alert/Alert";
 import { validateNumber, validatePassword } from "../../utils/index";
 import { loginHandler } from "../../services/index";
 import { useAuth, useAlert } from "../../Context/index";
@@ -8,8 +8,8 @@ import { useNavigate } from "react-router-dom";
 let isNumberValid, isPasswordValid;
 export const Login = () => {
   const navigate = useNavigate();
-  const { authDispatch, password, number} = useAuth();
-//for alert
+  const { authDispatch, password, number } = useAuth();
+  //for alert
   const { alert, setAlert } = useAlert();
   const handleNumberLogin = (event) => {
     isNumberValid = validateNumber(event.target.value);
@@ -53,7 +53,7 @@ export const Login = () => {
         payload: username,
       });
 
-      console.log({accessToken});
+      console.log({ accessToken });
       const token = localStorage.getItem("token");
       if (token) {
         navigate("/");
@@ -61,9 +61,8 @@ export const Login = () => {
           type: "CLEAR_SIGNUP",
         });
       }
-    }
-    else{
-      alert("Please Submit Correct Details")
+    } else {
+      alert("Please Submit Correct Details");
     }
   };
 
@@ -83,30 +82,37 @@ export const Login = () => {
     });
     navigate("/");
     //for closing login modal
-     authDispatch({
-    type:"LOGIN_MODAL"
-  }) 
-  };
- 
-  //for login modal close
-  const handleLoginModalClose=()=>{
     authDispatch({
-      type:"LOGIN_MODAL"
-    })
-  }
+      type: "LOGIN_MODAL",
+    });
+  };
+
+  //for login modal close
+  const handleLoginModalClose = () => {
+    authDispatch({
+      type: "LOGIN_MODAL",
+    });
+  };
 
   return (
     <div className=" auth-container signup-container">
       {/* taking container for both login and signup for better ui as auth-container */}
       <div className="auth-comp d-flex justify-center direction-column align-center">
         <h2 className=" secondary-text text-l pointer">Login</h2>
-        <span id='close-icon'><span className="material-symbols-outlined cursor" 
-         onClick={handleLoginModalClose}
-       >close</span></span>
+        <span id="close-icon">
+          <span
+            className="material-symbols-outlined cursor"
+            onClick={handleLoginModalClose}
+          >
+            close
+          </span>
+        </span>
         <form className="d-flex direction-column gap-s align-center">
           <span className="auth-background">
             <div className="auth-form">
-              <label className="form-label secondary-text text-m cursor">Mobile Number</label>
+              <label className="form-label secondary-text text-m cursor">
+                Mobile Number
+              </label>
               <input
                 className="input-form"
                 placeholder="Enter Registered Mobile Number"
@@ -116,7 +122,9 @@ export const Login = () => {
               />
             </div>
             <div className="auth-form">
-              <label className="form-label secondary-text cursor text-m ">Password</label>
+              <label className="form-label secondary-text cursor text-m ">
+                Password
+              </label>
               <input
                 className="input-form"
                 placeholder="*********"
@@ -127,12 +135,18 @@ export const Login = () => {
             </div>
           </span>
           <div className="cta">
-            <button className="test-btn log-btn secondary-text text-s cursor" onClick={handleLogin}>
+            <button
+              className="test-btn log-btn secondary-text text-s cursor"
+              onClick={handleLogin}
+            >
               Login
             </button>
           </div>
         </form>
-        <button className="test-btn crd-btn secondary-text text-s cursor" onClick={handlleTestLoginButton}>
+        <button
+          className="test-btn crd-btn secondary-text text-s cursor"
+          onClick={handlleTestLoginButton}
+        >
           Login with Test Credentials
         </button>
       </div>

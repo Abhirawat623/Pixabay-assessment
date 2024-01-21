@@ -6,3 +6,4 @@ export {HorizontalImageCard} from '../Components/HorizontalImageCard/HorizontalI
 export {Alert} from '../Components/Alert/Alert';
 export {Login} from '../Components/Login/Login';
 export {SignUp} from '../Components/SignUp/SignUp';
+export {Categories} from '../Components/Categories/Categories';

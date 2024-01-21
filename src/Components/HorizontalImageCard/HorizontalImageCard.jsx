@@ -4,12 +4,12 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useSearchedImage } from "../../Context/index";
 export const HorizontalImageCard = () => {
-    //using param for id
+  //using param for id
   const { _id } = useParams();
   //for single image card
   const [singleImage, setSingleImage] = useState({});
   //fetching ap by id
-   useEffect(() => {
+  useEffect(() => {
     (async () => {
       try {
         const { data } = await axios.get(
@@ -22,33 +22,41 @@ export const HorizontalImageCard = () => {
       }
     })();
   }, [singleImage]);
- //single image modal close
- const{searchedImageDispatch}=useSearchedImage()
- const handleCloseSingleImageModal=()=>{
-  searchedImageDispatch({
-    type:"SINGLE_IMAGE_MODAL"
-  })
- }
+  //single image modal close
+  const { searchedImageDispatch } = useSearchedImage();
+  const handleCloseSingleImageModal = () => {
+    searchedImageDispatch({
+      type: "SINGLE_IMAGE_MODAL",
+    });
+  };
   //params from api
   const { largeImageURL, downloads, likes, views, user_id, user, type } =
     singleImage;
-
 
   return (
     <div className="horizontal-image-card-container d-flex direction-column align-center">
       <header className="horizontal-image-card-header d-flex direction-row">
         <h2 className="primary-text text-m ">Preview ID:{_id}</h2>
-        <span id='close-icon'><span className="material-symbols-outlined cursor" 
-        onClick={handleCloseSingleImageModal}>close</span></span>
+        <span id="close-icon">
+          <span
+            className="material-symbols-outlined cursor"
+            onClick={handleCloseSingleImageModal}
+          >
+            close
+          </span>
+        </span>
       </header>
       <main
         className="horizontal-image-card-main d-flex direction-row align-center 
          padding-m border-radius-m gap-xl"
       >
-        <img className="horizontal-image-card-image border-radius-m" src={largeImageURL} />
+        <img
+          className="horizontal-image-card-image border-radius-m"
+          src={largeImageURL}
+        />
         <aside className="horizontal-image-card-aside-container gap-l">
           <div className="horizontal-image-card-download d-flex direction-column gap-s">
-           <h2 className="secondarytext text-m">Download</h2>
+            <h2 className="secondarytext text-m">Download</h2>
             <div className="download-container d-flex direction-column gap-s secondary-text text-s">
               <div className="download-small-container d-flex direction-row space-between ">
                 <div className="download-small accent-text">Small</div>
@@ -93,43 +101,43 @@ export const HorizontalImageCard = () => {
                 />
               </div>
             </div>
-            <button className="download-btn primary-text text-s no-border border-radius-s">Download for free!</button>
+            <button className="download-btn primary-text text-s no-border border-radius-s">
+              Download for free!
+            </button>
           </div>
           <div className="horizontal-image-card-information ">
             <h2 className="secondary-text text-m ">Information</h2>
-              <div className="horizontal-image-info gap-m secondary-text text-s">
-                <div className="user d-flex gap-s direction-column">
-                    <h4 className="accent-text">User</h4>
-                    <span className="bold-text">{user}</span>
-                </div>
-
-                <div className="user_id d-flex gap-s direction-column">
-                    <h4 className="accent-text">User_Id</h4>
-                    <span className="bold-text">{user_id}</span>
-                </div>
-              
-                <div className="type_id d-flex gap-s direction-column">
-                    <h4 className="accent-text">Type</h4>
-                    <span className="bold-text">{type}</span>
-                </div>
-                
-                <div className="views d-flex gap-s direction-column">
-                    <h4 className="accent-text">Views</h4>
-                    <span className="bold-text">{views}</span>
-                </div>
-
-                <div className="downloads d-flex gap-s direction-column">
-                    <h4 className="accent-text">Downloads</h4>
-                    <span className="bold-text">{downloads}</span>
-                </div>
-          
-          
-                <div className="likes d-flex gap-s direction-column">
-                    <h4 className="accent-text">Likes</h4>
-                    <span className="bold-text">{likes}</span>
-                </div>
+            <div className="horizontal-image-info gap-m secondary-text text-s">
+              <div className="user d-flex gap-s direction-column">
+                <h4 className="accent-text">User</h4>
+                <span className="bold-text">{user}</span>
               </div>
-        
+
+              <div className="user_id d-flex gap-s direction-column">
+                <h4 className="accent-text">User_Id</h4>
+                <span className="bold-text">{user_id}</span>
+              </div>
+
+              <div className="type_id d-flex gap-s direction-column">
+                <h4 className="accent-text">Type</h4>
+                <span className="bold-text">{type}</span>
+              </div>
+
+              <div className="views d-flex gap-s direction-column">
+                <h4 className="accent-text">Views</h4>
+                <span className="bold-text">{views}</span>
+              </div>
+
+              <div className="downloads d-flex gap-s direction-column">
+                <h4 className="accent-text">Downloads</h4>
+                <span className="bold-text">{downloads}</span>
+              </div>
+
+              <div className="likes d-flex gap-s direction-column">
+                <h4 className="accent-text">Likes</h4>
+                <span className="bold-text">{likes}</span>
+              </div>
+            </div>
           </div>
         </aside>
       </main>

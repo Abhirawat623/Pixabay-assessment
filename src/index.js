@@ -6,6 +6,7 @@ import {
   SearchedImageProvider,
   AlertProvider,
   AuthProvider,
+
 } from "./Context/index";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

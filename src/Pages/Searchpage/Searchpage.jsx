@@ -5,6 +5,7 @@ import {
   Searchbar,
   ResultContainer,
   HorizontalImageCard,
+  
 } from "../../Components/index";
 import { useSearchedImage } from "../../Context/index";
 export const Searchpage = () => {
@@ -20,6 +21,7 @@ export const Searchpage = () => {
       style={{ backgroundImage: `url("${randomWallpaper}")` }}>
       <Navbar />
       <Searchbar />
+     
       <ResultContainer />
       {isSingleImageModalOpen && <HorizontalImageCard />}
     </main>
