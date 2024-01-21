@@ -61,3 +61,10 @@
 .grid-item--height4 {
   height: 360px;
 }
+
+.card-image-tag{
+  background-color: var rgb(77, 75, 75);
+  border-radius: 5px;
+  padding: 8px;
+  object-fit: cover;
+}

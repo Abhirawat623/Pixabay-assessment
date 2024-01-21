@@ -17,7 +17,7 @@ export const ImageCard = ({ items }) => {
     });
   };
   //props passed as items
-  const { largeImageURL, id } = items;
+  const { largeImageURL, id ,tags } = items;
   return (
     <div className="image-card-container d-flex direction-column align-center no-border">
       <div className="image-container ">
@@ -32,6 +32,11 @@ export const ImageCard = ({ items }) => {
           />
         </div>
       </div>
+      <div className="card-image-tags d-flex direction-row gap-s padding-s secondary-text text-s">
+      {tags.split(',').map((tag, index) => (
+          <span key={index} className="card-image-tag">{tag.trim()}</span>
+        ))}
+        </div>
     </div>
   );
 };

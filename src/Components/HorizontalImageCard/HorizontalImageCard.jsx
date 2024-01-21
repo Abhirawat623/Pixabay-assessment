@@ -3,6 +3,14 @@ import "./HorizontalImageCard.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useSearchedImage } from "../../Context/index";
+import React from "react";
+import {
+  Panel,
+  useReactFlow,
+  getRectOfNodes,
+  getTransformForBounds,
+} from "reactflow";
+import { toPng } from "html-to-image";
 export const HorizontalImageCard = () => {
   //using param for id
   const { _id } = useParams();
@@ -30,8 +38,38 @@ export const HorizontalImageCard = () => {
     });
   };
   //params from api
-  const { largeImageURL, downloads, likes, views, user_id, user, type } =
-    singleImage;
+  const {
+    largeImageURL,
+    downloads,
+    likes,
+    views,
+    user_id,
+    user,
+    type,
+    webformatURL,
+  } = singleImage;
+
+  //downloader
+  const download = (e) => {
+    console.log(e.target.href);
+    fetch(e.target.href, {
+      method: "GET",
+      headers: {},
+    })
+      .then((response) => {
+        response.arrayBuffer().then(function (buffer) {
+          const url = window.URL.createObjectURL(new Blob([buffer]));
+          const link = document.createElement("a");
+          link.href = url;
+          link.setAttribute("download", "image.png"); //or any other extension
+          document.body.appendChild(link);
+          link.click();
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   return (
     <div className="horizontal-image-card-container d-flex direction-column align-center">
@@ -92,7 +130,13 @@ export const HorizontalImageCard = () => {
 
               <div className="download-original-container d-flex direction-row space-between">
                 <div className="download-original accent-text">Original</div>
-                <label className="download-original-para">2900*4655</label>
+                <label
+                  className="download-original-para"
+                  href={webformatURL}
+                  download
+                >
+                  2900*4655
+                </label>
                 <input
                   type="radio"
                   id="original"
@@ -102,7 +146,9 @@ export const HorizontalImageCard = () => {
               </div>
             </div>
             <button className="download-btn primary-text text-s no-border border-radius-s">
-              Download for free!
+              <a href={webformatURL} download onClick={(e) => download(e)}>
+                Download for free!
+              </a>
             </button>
           </div>
           <div className="horizontal-image-card-information ">
@@ -141,7 +187,9 @@ export const HorizontalImageCard = () => {
           </div>
         </aside>
       </main>
-      <footer className="horizontal-image-card-footer"> </footer>
+      <footer className="horizontal-image-card-footer">
+        <div className="card-image-tags d-flex direction-row gap-s padding-s secondary-text text-s"></div>
+      </footer>
     </div>
   );
 };

@@ -54,3 +54,12 @@
   height: 2.5rem;
   width: 100%;
 }
+.horizontal-card-image-tags{
+  position: relative;
+  bottom: 0;
+  left: 1rem;
+}
+.download-btn:visited{
+  text-decoration: none;
+  list-style: none;
+}
