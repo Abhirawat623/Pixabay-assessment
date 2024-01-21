@@ -98,7 +98,7 @@ export const HorizontalImageCard = () => {
             <div className="download-container d-flex direction-column gap-s secondary-text text-s">
               <div className="download-small-container d-flex direction-row space-between ">
                 <div className="download-small accent-text">Small</div>
-                <label className="download-small-para">640*960</label>
+                <label className="download-small-para">640 &times; 960</label>
                 <input
                   type="radio"
                   id="small"
@@ -108,7 +108,7 @@ export const HorizontalImageCard = () => {
               </div>
               <div className="download-medium-container d-flex direction-row space-between">
                 <div className="download-medium accent-text">Medium</div>
-                <label className="download-medium-para">1920*2660</label>
+                <label className="download-medium-para">1920 &times; 2660</label>
                 <input
                   type="radio"
                   id="medium"
@@ -119,8 +119,8 @@ export const HorizontalImageCard = () => {
 
               <div className="download-large-container d-flex direction-row space-between">
                 <div className="download-large accent-text">Large</div>
-                <label className="download-large-para">2400*3600</label>
-                <input
+                <label className="download-large-para">2400 &times; 3600</label>
+                <input 
                   type="radio"
                   id="large"
                   name="download-large"
