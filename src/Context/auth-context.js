@@ -8,19 +8,23 @@ const initialValue = {
   password: "",
   confirmPassword:"",
   accessToken:"",
-  name:""
+  name:"",
+  isLoginModalOpen:false,
+  isSignUpModalOpen:false
 };
 
 const AuthContext = createContext(initialValue);
 
 const AuthProvider = ({ children }) => {
-  const [{ username, number, password, email,confirmPassword,accessToken,name }, authDispatch] = useReducer(
+  const [{ username, number, password, email,confirmPassword,accessToken,name,
+  isLoginModalOpen,isSignUpModalOpen}, authDispatch] = useReducer(
     authReducer,
     initialValue
   );
   return (
     <AuthContext.Provider
-      value={{ email, password, number,username,confirmPassword,name,accessToken, authDispatch }}
+      value={{ email, password, number,username,confirmPassword,name,accessToken,
+        isLoginModalOpen,isSignUpModalOpen, authDispatch }}
     >
       {children}
     </AuthContext.Provider>

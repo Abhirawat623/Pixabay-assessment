@@ -1,17 +1,16 @@
 import "./Login.css";
 import { Link } from "react-router-dom";
-import{ Alert} from '../index';
+import{ Alert} from '../Alert/Alert';
 import { validateNumber, validatePassword } from "../../utils/index";
-import { loginHandler } from "../../services";
+import { loginHandler } from "../../services/index";
 import { useAuth, useAlert } from "../../Context/index";
 import { useNavigate } from "react-router-dom";
 let isNumberValid, isPasswordValid;
 export const Login = () => {
   const navigate = useNavigate();
-  const { authDispatch, password, number } = useAuth();
-
+  const { authDispatch, password, number} = useAuth();
+//for alert
   const { alert, setAlert } = useAlert();
-
   const handleNumberLogin = (event) => {
     isNumberValid = validateNumber(event.target.value);
     if (isNumberValid) {
@@ -35,7 +34,6 @@ export const Login = () => {
       console.log("Inavlid Password");
     }
   };
-
   console.log(number, password);
 
   const handleLogin = async (event) => {
@@ -55,7 +53,7 @@ export const Login = () => {
         payload: username,
       });
 
-      console.log(accessToken);
+      console.log({accessToken});
       const token = localStorage.getItem("token");
       if (token) {
         navigate("/");
@@ -81,12 +79,27 @@ export const Login = () => {
       payload: username,
     });
     navigate("/");
+    //for closing login modal
+     authDispatch({
+    type:"LOGIN_MODAL"
+  }) 
   };
+ 
+  //for login modal close
+  const handleLoginModalClose=()=>{
+    authDispatch({
+      type:"LOGIN_MODAL"
+    })
+  }
 
   return (
-    <div className=" auth-login-container signup-container">
-      <div className="auth-login d-flex justify-center direction-column align-center">
+    <div className=" auth-container signup-container">
+      {/* taking container for both login and signup for better ui as auth-container */}
+      <div className="auth-comp d-flex justify-center direction-column align-center">
         <h2 className=" secondary-text text-l pointer">Login</h2>
+        <span id='close-icon'><span className="material-symbols-outlined cursor" 
+         onClick={handleLoginModalClose}
+       >close</span></span>
         <form className="d-flex direction-column gap-s align-center">
           <span className="auth-background">
             <div className="auth-form">
@@ -116,10 +129,6 @@ export const Login = () => {
             </button>
           </div>
         </form>
-        <Link to="/signup">
-          {" "}
-          <button className="test-btn sign-btn secondary-text text-s pointer">Sign Up</button>
-        </Link>
         <button className="test-btn crd-btn secondary-text text-s pointer" onClick={handlleTestLoginButton}>
           Login with Test Credentials
         </button>

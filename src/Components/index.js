@@ -5,3 +5,4 @@ export {ResultContainer} from '../Components/ResultContainer/ResultContainer';
 export {HorizontalImageCard} from '../Components/HorizontalImageCard/HorizontalImageCard';
 export {Alert} from '../Components/Alert/Alert';
 export {Login} from '../Components/Login/Login';
+export {SignUp} from '../Components/SignUp/SignUp';

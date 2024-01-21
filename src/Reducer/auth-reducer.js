@@ -46,6 +46,16 @@ export const authReducer = (state, { type, payload }) => {
         accessToken:"",
         name:""
       }
+      case "LOGIN_MODAL":
+        return{
+          ...state,
+          isLoginModalOpen:!state.isLoginModalOpen
+        }
+        case "SIGNUP_MODAL":
+        return{
+          ...state,
+          isSignUpModalOpen:!state.isSignUpModalOpen
+        }
   
     default:
       return state;

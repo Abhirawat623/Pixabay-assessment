@@ -6,10 +6,11 @@ import {Routes,Route} from 'react-router-dom';
 function App() {
   return (
   <Routes>
-    <Route exact path='/' element={<Homepage/>}/>
+    <Route path='/' element={<Homepage/>}/>
     <Route path='/Search' element={<Searchpage/>}/>
     <Route path='/Search/:_id' element={<Searchpage/>}/>
-    <Route path='/auth/login' element={<Homepage/>}/>
+    <Route path='/login' element={<Homepage/>}/>
+    <Route path='/signup' element={<Homepage/>}/>
   </Routes>
   );
 }
