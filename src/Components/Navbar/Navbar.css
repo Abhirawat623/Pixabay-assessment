@@ -20,10 +20,10 @@
 .homepage-text:visited{
     color: #fff;
 }
-
-#logout-icon{
-    color: white;
-    position: relative;
-    top:10px;
-    right: 18px;
+.login-btn{
+    text-decoration: none;
+    list-style: none;
+}
+.login-btn:visited{
+    color:#fff;
 }
