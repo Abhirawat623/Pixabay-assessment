@@ -30,9 +30,6 @@ V Travel App suggests you the best images with tags. You can download the images
 - Form Validation using Regex
 - same Mobile number can't signup
 
-## React Router
-- Categories data from MongoDB
-- Hotels arranged categorywise
 
 ## Tech Stack
 
