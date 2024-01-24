@@ -2,7 +2,7 @@
 
 # About
 
-V Travel App suggests you the best images with tags. You can download the images and search them accordingly to their types.
+Pixa bay App suggests you the best images with tags. You can download the images and search them accordingly to their types.
 
 
 # List of features
